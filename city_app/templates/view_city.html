@@ -1,0 +1,26 @@
+<!doctype html>
+{% load static %}
+    <head>
+    <title>
+        Page Title
+    </title>
+    </head>
+    <body>
+
+
+    <div>
+        {% comment %}<a href="{% url 'cities_view' city.pk %}">{{city.name}}</a>{% endcomment %}
+         {% comment %}<a href="{% url 'cities_view' city.pk %}">{{city.name}}</a>{% endcomment %}
+        {% for i in city %}
+
+            <p><a href="{{ i }}">{{ i }}</a></p>
+
+        {% endfor %}
+
+    </div>
+<hr>
+
+    <h2>{{city.name}}</h2>
+    <h2>{{city.age}}</h2>
+    </body>
+</html>
